@@ -1,0 +1,13 @@
+{
+    "apiVersion": 2,
+    "name": "create-block/spreadsheet",
+    "title": "Spreadsheet",
+    "category": "media",
+    "icon": "editor-table",
+    "description": "A spreadsheet block.",
+    "supports": { "html": false },
+    "textdomain": "ssb",
+    "editorScript": "file:./public/block/index.js",
+    "style": "file:./admin/css/style.css",
+    "script": "file:./public/js/index.js?why-u-no-working?"
+}

@@ -1,0 +1,118 @@
+[data-spreadsheet-block] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+[data-spreadsheet-block] *, [data-spreadsheet-block] *:before, [data-spreadsheet-block] *:after {
+  box-sizing: inherit;
+}
+[data-spreadsheet-block].localhost:before {
+  content: attr(data-spreadsheet-block);
+  color: red;
+  display: block;
+  font-size: 12px;
+  order: -2;
+  flex: 0 0 100%;
+  max-width: 100%;
+  word-break: break-all;
+}
+[data-spreadsheet-block] .nav {
+  width: 100%;
+  order: -2;
+}
+[data-spreadsheet-block] input.visually-hidden + label {
+  order: -1;
+  cursor: pointer;
+}
+[data-spreadsheet-block] input.visually-hidden:checked + label {
+  text-decoration: underline;
+}
+[data-spreadsheet-block] input.visually-hidden ~ [data-sheet] {
+  flex: 0 0 100%;
+  display: none;
+}
+[data-spreadsheet-block] input.visually-hidden:checked + label + [data-sheet] {
+  display: block;
+}
+[data-spreadsheet-block].admin table {
+  margin: 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px;
+}
+[data-spreadsheet-block].admin.adding-editable [data-type=n]:not(.formula) {
+  box-shadow: #5c94bc 0 0 2px inset;
+}
+[data-spreadsheet-block].admin.adding-editable [data-type=n]:not(.formula).editable {
+  box-shadow: #007CBA 0 0 0 2px inset;
+}
+[data-spreadsheet-block].admin .editable {
+  box-shadow: #007CBA 0 0 0 2px inset;
+}
+[data-spreadsheet-block].admin .editable:hover {
+  box-shadow: #006BA1 0 0 0 2px inset;
+}
+[data-spreadsheet-block] .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(-0.25rem);
+}
+[data-spreadsheet-block] .hide-label {
+  display: inline-block;
+  width: 2rem;
+  height: 1.25rem;
+  margin: 0 0.25rem;
+  background-size: 100%;
+  background-position: 0 -0.375rem;
+  vertical-align: middle;
+}
+[data-spreadsheet-block] .hide-label .icon {
+  display: block;
+}
+[data-spreadsheet-block] .hide-label .icon-eye-disabled {
+  display: none;
+}
+[data-spreadsheet-block] :checked + .hide-label .icon-eye {
+  display: none;
+}
+[data-spreadsheet-block] :checked + .hide-label .icon-eye-disabled {
+  display: block;
+}
+[data-spreadsheet-block] .cell-edit {
+  display: inline-block;
+  margin: 0 0.25rem;
+  padding: 0 0.25rem;
+  vertical-align: top;
+  box-shadow: 0 0 0 2px #EEE;
+}
+[data-spreadsheet-block] input:checked + label.cell-edit {
+  box-shadow: 0 0 0 1px currentColor;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.spreadsheet-wrapper {
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 0 0 1px black inset;
+}
+
+[data-spreadsheet-block].localhost:before {
+  content: attr(data-spreadsheet-block);
+  color: gray;
+  display: block;
+  font-size: 10px;
+  order: -2;
+  flex: 0 0 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
